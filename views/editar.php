@@ -20,7 +20,7 @@
 				<label class="badge badge-secondary">Data de nascimento:</label><br>
 				<input class="form-control" type="date" name="Data_Nasc_Cliente" placeholder="Insira o sua data de nascimento" value="<?php echo $linha['Data_Nasc_Cliente']; ?>">
 				<br><br>
-				<input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Editar"> <a href="?pagina=home" class="btn btn-outline-warning my-2 my-sm-0">Cancelar</a>
+				<input class="btn btn-success my-2 my-sm-0" type="submit" value="Salvar"> <a href="?pagina=home" class="btn btn-warning my-2 my-sm-0">Cancelar</a>
 				<br><br>
 			</form>
 			
