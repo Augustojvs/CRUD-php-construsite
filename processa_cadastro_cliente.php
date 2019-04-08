@@ -13,4 +13,4 @@ $query = "INSERT INTO clientes(Nome_Cliente, Email_Cliente, Telefone_Cliente, Se
 
 mysqli_query($conexao, $query);
 
-header('location:index.php?pagina=cadastrar');
+header('location:index.php?pagina=home');
