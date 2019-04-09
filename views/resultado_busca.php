@@ -24,10 +24,12 @@ if (isset($_POST['Nome_Cliente'])) {
 
     <?php
     while ($linha = mysqli_fetch_array($consulta_clientes)) {
+        //RegEx para formatar número
+		$telefone = preg_replace('~(\d{2})[^\d]{0,7}(\d{4})[^\d]{0,7}(\d{4}).*~', '($1) $2-$3', $linha['Telefone_Cliente']);
         echo '<tr><td>' . $linha['ID_Cliente'] . '</td>';
         echo '<td>' . $linha['Nome_Cliente'] . '</td>';
         echo '<td>' . $linha['Email_Cliente'] . '</td>';
-        echo '<td>' . $linha['Telefone_Cliente'] . '</td>';
+        echo '<td>' . $telefone . '</td>';
         echo '<td>' . $linha['Data_Nasc_Cliente'] . '</td>';
         echo '<td><a class="btn btn-warning" href="?pagina=editar&editar=' . $linha['ID_Cliente'] . '">Editar</a> <a class="btn btn-danger" href="?pagina=excluir&id=' . $linha['ID_Cliente'] .'">Excluir</a></td></tr>';
     }
